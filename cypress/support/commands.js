@@ -26,15 +26,22 @@
 
 
 
-Cypress.Commands.add('LaunchBrowser', () => { 
-    // cy.visit("https://www.saucedemo.com/"),{ timeout: 520000 },{ force: true }
+Cypress.Commands.add('LaunchBrowser', () => {
     cy.visit("https://www.saucedemo.com/")
- })
+})
+
+Cypress.Commands.add('ValidateYourCart', (productName) => {
+    cy.get('.cart_item_label').each(($el, index, $list) => {
+        const textproduct = $el.find('.inventory_item_name').text()
+        if (textproduct.includes(productName)) {
+            expect(textproduct).to.be.equal(productName)
+        }
+    })
+})
 
 
 
-//  Cypress.Commands.add('Login', function(userName, password)  { 
-//     cy.get(this.userName).type(userName);
-//     cy.get(this.password).type(password);
-//     cy.get(this.loginButton).click(); 
-//  })
+
+
+
+
