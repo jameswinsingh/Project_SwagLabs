@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-15T15:58:02.219Z",
+    "end": "2023-02-15T15:58:09.671Z",
+    "duration": 7452,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2853a7f-a9b2-40bb-a051-88d3307527df",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutOverviewPage.cy.js",
+      "file": "cypress\\e2e\\testScripts\\VerifyCheckoutOverviewPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cfdb2d83-2db1-440d-a780-f93f1ba42069",
+          "title": "Verify the number of quantity and the total cost of the chosen item.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate the quantity and total cost of the products and click on finish button",
+              "fullTitle": "Verify the number of quantity and the total cost of the chosen item. Validate the quantity and total cost of the products and click on finish button",
+              "timedOut": null,
+              "duration": 5214,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearCookies();\nloginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.validateLandingPage();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.validateProductQuantity(this.overviewPageData.productQuantity);\noverviewPage.calculateProductTotal();\noverviewPage.selectFinish();",
+              "err": {},
+              "uuid": "72de3976-fae6-4320-a210-3d6691fc1dfa",
+              "parentUUID": "cfdb2d83-2db1-440d-a780-f93f1ba42069",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "72de3976-fae6-4320-a210-3d6691fc1dfa"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5214,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chats": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

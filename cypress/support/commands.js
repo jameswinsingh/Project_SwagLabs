@@ -26,11 +26,11 @@
 
 
 
-Cypress.Commands.add('LaunchBrowser', () => {
+Cypress.Commands.add('launchBrowser', () => {
     cy.visit("https://www.saucedemo.com/")
 })
 
-Cypress.Commands.add('ValidateYourCart', (productName) => {
+Cypress.Commands.add('validateYourCart', (productName) => {
     cy.get('.cart_item_label').each(($el, index, $list) => {
         const textproduct = $el.find('.inventory_item_name').text()
         if (textproduct.includes(productName)) {

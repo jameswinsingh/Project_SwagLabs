@@ -8,7 +8,7 @@ import { CheckoutPage } from '../../pages/CheckoutPage';
 import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage';
 
 
-describe("Checkout page", function () {
+describe("Verify the number of quantity and the total cost of the chosen item.", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
     const shoppingCartContainer = new CartPage()
@@ -16,7 +16,7 @@ describe("Checkout page", function () {
     const overviewPage = new CheckoutOverviewPage()
 
     beforeEach(function () {
-        cy.LaunchBrowser();
+        cy.launchBrowser();
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; });
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
         cy.fixture('CheckoutPageTestData').then(function (checkoutPageData) { this.checkoutPageData = checkoutPageData; });
@@ -26,7 +26,7 @@ describe("Checkout page", function () {
 
 
 
-    it("Validate the quantity of the products", function () {
+    it("Validate the quantity and total cost of the products and click on finish button", function () {
         cy.clearCookies();
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
@@ -35,8 +35,8 @@ describe("Checkout page", function () {
         checkoutPage.validateLandingPage();
         checkoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);
         checkoutPage.selectContinueButton();
-        overviewPage.validateProductQuantity(this.overviewPageData.productQuantity);
 
+        overviewPage.validateProductQuantity(this.overviewPageData.productQuantity);
         overviewPage.calculateProductTotal();
         overviewPage.selectFinish();
 

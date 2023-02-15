@@ -5,14 +5,14 @@ import { LoginPage } from "../../pages/LoginPage";
 import { CartPage } from '../../pages/CartPage';
 import { HomePage } from '../../pages/HomePage';
 
-describe("SauceLabs", function () {
+describe("Verify YOUR CART's product list, then click the checkout button.", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
     const shoppingCartContainer = new CartPage()
 
     beforeEach(function () {
 
-        cy.LaunchBrowser();
+        cy.launchBrowser();
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; });
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
 
@@ -50,7 +50,7 @@ describe("SauceLabs", function () {
 
     })
 
-    it("Verify products added to the Cart and select checkout button", function () {
+    it("Add product to the Cart and select checkout button", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();

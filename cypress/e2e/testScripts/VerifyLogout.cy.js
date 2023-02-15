@@ -12,7 +12,7 @@ import { BurgerMenuPage } from '../../pages/BurgerMenuPage';
 import { Logout } from '../../pages/LogOut';
 
 
-describe("Checkout complete page", function () {
+describe("Logout", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
     const shoppingCartContainer = new CartPage()
@@ -24,7 +24,7 @@ describe("Checkout complete page", function () {
     const logout = new Logout()
 
     beforeEach(function () {
-        cy.LaunchBrowser();
+        cy.launchBrowser();
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; });
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
         cy.fixture('CheckoutPageTestData').then(function (checkoutPageData) { this.checkoutPageData = checkoutPageData; });

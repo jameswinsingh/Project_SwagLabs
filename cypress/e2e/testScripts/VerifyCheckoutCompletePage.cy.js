@@ -9,7 +9,7 @@ import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage';
 import { CheckoutCompletePage } from '../../pages/CheckoutCompletePage';
 
 
-describe("Checkout complete page", function () {
+describe("Verify the checkout completion page's order success message.", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
     const shoppingCartContainer = new CartPage()
@@ -18,7 +18,7 @@ describe("Checkout complete page", function () {
     const completePage = new CheckoutCompletePage()
 
     beforeEach(function () {
-        cy.LaunchBrowser();
+        cy.launchBrowser();
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; });
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
         cy.fixture('CheckoutPageTestData').then(function (checkoutPageData) { this.checkoutPageData = checkoutPageData; });
@@ -29,7 +29,7 @@ describe("Checkout complete page", function () {
 
 
 
-    it("Validate the quantity of the products", function () {
+    it("Verify the success message and select 'Back Home' button" , function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();

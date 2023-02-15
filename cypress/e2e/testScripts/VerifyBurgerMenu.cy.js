@@ -11,7 +11,7 @@ import { BackToHomePage } from '../../pages/BackToHomePage';
 import { BurgerMenuPage } from '../../pages/BurgerMenuPage';
 
 
-describe("Checkout complete page", function () {
+describe("Burger Menu", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
     const shoppingCartContainer = new CartPage()
@@ -22,7 +22,7 @@ describe("Checkout complete page", function () {
     const burgerMenu = new BurgerMenuPage()
 
     beforeEach(function () {
-        cy.LaunchBrowser();
+        cy.launchBrowser();
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; });
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
         cy.fixture('CheckoutPageTestData').then(function (checkoutPageData) { this.checkoutPageData = checkoutPageData; });
@@ -35,7 +35,7 @@ describe("Checkout complete page", function () {
 
 
 
-    it("Validate the quantity of the products", function () {
+    it("Verify that the hamburger menu is open and the logo button is clicked.", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();
@@ -55,8 +55,11 @@ describe("Checkout complete page", function () {
        // productPage.validateProductPageTitle(this.ProductPageData.productText);
         productPage.openBurgerMenu();
 
+        
         burgerMenu.validateButgerMenuIsDisplayed(this.burgerMenuData.menuTitle);
+        cy.wait(3000);
         burgerMenu.logOut();
+        
 
 
     })

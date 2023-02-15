@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-15T15:46:59.931Z",
+    "end": "2023-02-15T15:47:18.880Z",
+    "duration": 18949,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "48268238-844b-4d53-9acd-cf434ccf7aa5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testScripts\\VerifyBurgerMenu.cy.js",
+      "file": "cypress\\e2e\\testScripts\\VerifyBurgerMenu.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df2d87e2-fe4e-4af5-a1e6-0d7f5258db97",
+          "title": "Burger Menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify that the hamburger menu is open and the logo button is clicked.",
+              "fullTitle": "Burger Menu Verify that the hamburger menu is open and the logo button is clicked.",
+              "timedOut": null,
+              "duration": 9816,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\n//checkoutPage.validateLandingPage();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\n//overviewPage.validateProductQuantity(this.overviewPageData.productQuantity);\n// overviewPage.calculateProductTotal();\noverviewPage.selectFinish();\ncompletePage.validateCompleteMessage(this.completePageData.completeText);\ncompletePage.selectBackHome();\n// productPage.validateProductPageTitle(this.ProductPageData.productText);\nproductPage.openBurgerMenu();\nburgerMenu.validateButgerMenuIsDisplayed(this.burgerMenuData.menuTitle);\ncy.wait(3000);\nburgerMenu.logOut();",
+              "err": {},
+              "uuid": "b948f65f-b5cf-41b3-ac48-557cc216cc04",
+              "parentUUID": "df2d87e2-fe4e-4af5-a1e6-0d7f5258db97",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b948f65f-b5cf-41b3-ac48-557cc216cc04"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9816,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chats": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

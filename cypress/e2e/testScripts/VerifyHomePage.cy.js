@@ -3,7 +3,7 @@ import 'cypress-xpath'
 import { HomePage } from '../../pages/HomePage';
 import { LoginPage } from "../../pages/LoginPage";
 
-describe("SauceLabs", function () {
+describe("Add products to the cart", function () {
 
     const homePage = new HomePage();
     const login = new LoginPage();
@@ -11,14 +11,14 @@ describe("SauceLabs", function () {
     beforeEach(function () {
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; })
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; })
-        cy.LaunchBrowser();
+        cy.launchBrowser();
 
     })
 
 
 
 
-    it("Validate Home landing page", function () {
+    it("Validate Home landing page after login", function () {
         login.login(this.LoginData.userName, this.LoginData.password)
         homePage.validateHomePage();
     })

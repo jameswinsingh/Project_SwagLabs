@@ -29,7 +29,7 @@ export class CartPage {
     validateYourCartProducts(productName) {
 
         productName.forEach(element => {
-            cy.ValidateYourCart(element);
+            cy.validateYourCart(element);
 
         });
 

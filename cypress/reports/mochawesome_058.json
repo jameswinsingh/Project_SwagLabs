@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-15T15:58:29.137Z",
+    "end": "2023-02-15T15:58:34.526Z",
+    "duration": 5389,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb7de534-05f0-41d1-9b0e-dc4bbcfb7e3b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testScripts\\VerifyHomePage.cy.js",
+      "file": "cypress\\e2e\\testScripts\\VerifyHomePage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35ca470f-d336-404e-8e2a-98406740d720",
+          "title": "Add products to the cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate Home landing page after login",
+              "fullTitle": "Add products to the cart Validate Home landing page after login",
+              "timedOut": null,
+              "duration": 1510,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "login.login(this.LoginData.userName, this.LoginData.password);\nhomePage.validateHomePage();",
+              "err": {},
+              "uuid": "f16f8553-026a-4d26-aaa6-1336dd6366f0",
+              "parentUUID": "35ca470f-d336-404e-8e2a-98406740d720",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add product to cart",
+              "fullTitle": "Add products to the cart Add product to cart",
+              "timedOut": null,
+              "duration": 1719,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "login.login(this.LoginData.userName, this.LoginData.password);\n//cy.Login(this.LoginData.userName, this.LoginData.password); \nhomePage.addproduct(this.homePageData.productname);",
+              "err": {},
+              "uuid": "eb5aa4c5-e6dd-47a9-a3f7-78f7f2a02917",
+              "parentUUID": "35ca470f-d336-404e-8e2a-98406740d720",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f16f8553-026a-4d26-aaa6-1336dd6366f0",
+            "eb5aa4c5-e6dd-47a9-a3f7-78f7f2a02917"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3229,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chats": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

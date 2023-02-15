@@ -34,7 +34,6 @@ export class CheckoutOverviewPage {
         cy.get(this.itemPrice).each(($e1, index, $list) => {
             const getText = $e1.text();
             var splitText = getText.split("$")
-            //cy.log(splitText)
             splitText = splitText[1].trim()
             sumofProducts = Number(sumofProducts) + Number(splitText)
 
@@ -42,13 +41,11 @@ export class CheckoutOverviewPage {
             cy.get(".summary_tax_label").each(($e1, index, $list) => {
                 const getText = $e1.text();
                 var splitText = getText.split("$")
-                //cy.log(splitText)
                 splitText = splitText[1].trim()
                 tax = Number(tax) + Number(splitText)
 
             }).then(function () {
                 sumOfProductAndTax = sumOfProductAndTax + sumofProducts + tax;
-                //cy.log(sumOfProductAndTax)
             })
         })
         //METHOD TO TRIM THE TOTAL
@@ -63,8 +60,7 @@ export class CheckoutOverviewPage {
     }
 
 
-    selectFinish()
-    {
+    selectFinish() {
         cy.get(this.finishButton).click()
     }
 
