@@ -1,30 +1,21 @@
 export class CheckoutOverviewPage {
 
-    // priceBar = ".item_pricebar"
+    overviewPageProperty = ".header_secondary_container"
     itemPrice = ".inventory_item_price"
     totalPrice = ".summary_total_label"
     finishButton = '#finish'
-
-
-    getCartItem() {
-        return cy.get('.cart_item')
-    }
-
-    getCartQuantity() {
-        return '.cart_quantity'
-    }
-
+    cartItem = '.cart_item'
+    cartQuantity = '.cart_quantity'
 
     validateProductQuantity(productQuantity) {
-        this.getCartItem().each(($el, index, $list) => {
-            const textproduct = $el.find('.cart_quantity').text()
+        cy.get(this.cartItem).each(($el, index, $list) => {
+            const textproduct = $el.find(this.cartQuantity).text()
 
             if (textproduct.includes(productQuantity)) {
                 expect(textproduct).to.be.equal(productQuantity)
             }
         })
     }
-
 
     calculateProductTotal() {
         var sumofProducts = 0;
@@ -55,13 +46,15 @@ export class CheckoutOverviewPage {
             var total = splitText[1].trim()
 
             expect(Number(total)).to.equal(Number(sumOfProductAndTax));
-
         })
     }
 
-
     selectFinish() {
         cy.get(this.finishButton).click()
+    }
+
+    validateOverviewPageProperties(expectedText) {
+        cy.get(this.overviewPageProperty).should("have.text", expectedText)
     }
 
 

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-15T13:09:41.475Z",
-    "end": "2023-02-15T13:09:55.387Z",
-    "duration": 13912,
+    "start": "2023-02-16T13:08:17.687Z",
+    "end": "2023-02-16T13:08:31.134Z",
+    "duration": 13447,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7703d109-6ec6-4ce3-ac5d-be05ec7f9d52",
+      "uuid": "1a462569-9247-4d5d-b6c5-e4f4a14017e4",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyBackToHomePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyBackToHomePage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cf2d5e04-229e-401a-b2de-e52eabbb985a",
+          "uuid": "47024048-4683-486d-9af4-f80480a2d5c8",
           "title": "Navigate back to home page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Navigate back to home page and open burger menu",
               "fullTitle": "Navigate back to home page Navigate back to home page and open burger menu",
               "timedOut": null,
-              "duration": 9432,
+              "duration": 8810,
               "state": "passed",
               "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.selectFinish();\ncompletePage.validateCompleteMessage(this.completePageData.completeText);\ncompletePage.selectBackHome();\nproductPage.validateProductPageTitle(this.ProductPageData.productText);\nproductPage.openBurgerMenu();",
+              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.selectFinish();\ncompletePage.selectBackHome();\nproductPage.validateProductPageTitle(this.ProductPageData.productText);",
               "err": {},
-              "uuid": "d01bf32a-7227-42a8-8a6b-198f630461ab",
-              "parentUUID": "cf2d5e04-229e-401a-b2de-e52eabbb985a",
+              "uuid": "f1fd0aa8-0ab0-4b89-b48c-69cf00b9dcfd",
+              "parentUUID": "47024048-4683-486d-9af4-f80480a2d5c8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d01bf32a-7227-42a8-8a6b-198f630461ab"
+            "f1fd0aa8-0ab0-4b89-b48c-69cf00b9dcfd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9432,
+          "duration": 8810,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

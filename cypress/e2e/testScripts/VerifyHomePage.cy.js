@@ -9,25 +9,26 @@ describe("Add products to the cart", function () {
     const login = new LoginPage();
 
     beforeEach(function () {
-        cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; })
-        cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; })
+        cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData;})
+        cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData;})
         cy.launchBrowser();
-
     })
 
-
-
+    afterEach(function()
+    {
+        cy.logout();
+    })
 
     it("Validate Home landing page after login", function () {
-        login.login(this.LoginData.userName, this.LoginData.password)
-        homePage.validateHomePage();
-    })
-
-    it("Add product to cart", function () {
-        login.login(this.LoginData.userName, this.LoginData.password)
-        //cy.Login(this.LoginData.userName, this.LoginData.password); 
+        login.login(this.LoginData.userName, this.LoginData.password);
+        homePage.validateHomePageProperties();
         homePage.addproduct(this.homePageData.productname)
     })
+
+    // it("Add product to cart", function () {
+    //     login.login(this.LoginData.userName, this.LoginData.password);
+    //     homePage.addproduct(this.homePageData.productname)
+    // })
 
 
 

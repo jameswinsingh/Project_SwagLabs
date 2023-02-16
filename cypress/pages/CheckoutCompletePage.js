@@ -1,29 +1,13 @@
-export class CheckoutCompletePage
-{
+export class CheckoutCompletePage {
   completeMessage = ".complete-header";
   backHomeButton = "#back-to-products"
 
-
-
-  validateCompleteMessage(expectedText)
-  {
-    cy.get(this.completeMessage).should("have.text", expectedText );
+  validateCompleteMessage(expectedText) {
+    cy.get(this.completeMessage).should("have.text", expectedText);
   }
 
-
-  selectBackHome()
-  {
-
+  selectBackHome() {
     cy.get(this.backHomeButton).click();
 
   }
-
-
-
-
-
-
-
-
-
 }

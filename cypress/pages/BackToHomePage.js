@@ -1,8 +1,20 @@
 export class BackToHomePage {
 
     title = ".title"
-    burgerMenu = "#react-burger-menu-btn"
+    burgerMenu = ".bm-burger-button"
+    burgerMenuButon = "#react-burger-menu-btn"
+    logoutButton = "#logout_sidebar_link"
 
+
+    getBurgerMenuButton()
+    {
+        return cy.get(this.burgerMenuButon)
+    }
+
+    getLogoutButton()
+    {
+        return cy.get(this.logoutButton)
+    }
 
 
 
@@ -10,23 +22,8 @@ export class BackToHomePage {
         cy.get(this.title).should("have.text", titleText)
     }
 
-
-    openBurgerMenu()
-    {
+    openBurgerMenu() {
         cy.get(this.burgerMenu).click()
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

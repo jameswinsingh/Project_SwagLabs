@@ -21,10 +21,12 @@ describe("Verify the number of quantity and the total cost of the chosen item.",
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
         cy.fixture('CheckoutPageTestData').then(function (checkoutPageData) { this.checkoutPageData = checkoutPageData; });
         cy.fixture('CheckoutOverviewPage').then(function (overviewPageData) { this.overviewPageData = overviewPageData; });
-
     })
 
-
+    afterEach(function()
+    {
+        cy.logout();
+    })
 
     it("Validate the quantity and total cost of the products and click on finish button", function () {
         cy.clearCookies();
@@ -32,36 +34,13 @@ describe("Verify the number of quantity and the total cost of the chosen item.",
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();
         shoppingCartContainer.selectCheckOut();
-        checkoutPage.validateLandingPage();
+        
         checkoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);
         checkoutPage.selectContinueButton();
 
+        overviewPage.validateOverviewPageProperties(this.overviewPageData.overviewText)
         overviewPage.validateProductQuantity(this.overviewPageData.productQuantity);
         overviewPage.calculateProductTotal();
         overviewPage.selectFinish();
-
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })

@@ -11,80 +11,32 @@ describe("Verify YOUR CART's product list, then click the checkout button.", fun
     const shoppingCartContainer = new CartPage()
 
     beforeEach(function () {
-
         cy.launchBrowser();
         cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData; });
         cy.fixture('HomePageTestData').then(function (homePageData) { this.homePageData = homePageData; });
-
-
+        cy.fixture('CartPageTestData').then(function (cartPageData) { this.cartPageData = cartPageData; });
     })
 
-
-    // it("Validate your cart page", function()
-    // {
-    //     login.login(this.LoginData.userName, this.LoginData.password);
-    //     homePage.addproduct(this.homePageData.productname);
-    //     yourCart.ClickCart();
-    //     this.homePageData.productname.forEach(element => 
-    //     {
-    //         yourCart.validateYourCartProducts(element)
-
-    //     });
-    // })
-
-    // it("Select cart icon", function()
-    // {
-    //     login.login(this.LoginData.userName, this.LoginData.password);
-    //     homePage.addproduct(this.homePageData.productname);
-    //     yourCart.clickCart();
-    //     yourCart.validateYourCartProducts(this.homePageData.productname);
-    //     yourCart.selectCheckOut();
-
-    // })
-
-    it("Select cart icon", function () {
-        loginPage.login(this.LoginData.userName, this.LoginData.password);
-        homePage.addproduct(this.homePageData.productname);
-        shoppingCartContainer.clickCart();
-
-
+    afterEach(function()
+    {
+        cy.logout();
     })
-
+//Select cart icon
     it("Add product to the Cart and select checkout button", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();
+        shoppingCartContainer.validateYourCartPageProperties(this.cartPageData.yourCartText);
         shoppingCartContainer.validateYourCartProducts(this.homePageData.productname);
         shoppingCartContainer.selectCheckOut();
-
-
-
     })
 
-    // it("Select Checkout button", function()
-    // {
+    // it("Add product to the Cart and select checkout button", function () {
     //     loginPage.login(this.LoginData.userName, this.LoginData.password);
     //     homePage.addproduct(this.homePageData.productname);
+
     //     shoppingCartContainer.clickCart();
+    //     shoppingCartContainer.validateYourCartProducts(this.homePageData.productname);
     //     shoppingCartContainer.selectCheckOut();
-
     // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })

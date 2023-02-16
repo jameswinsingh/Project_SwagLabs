@@ -5,8 +5,8 @@ export class HomePage {
     inventoryItemName = '.inventory_item_name';
 
 
-    validateHomePage() {
-        cy.xpath(this.product).should("be.visible");
+    validateHomePageProperties() {
+        cy.xpath(this.product).should("have.text", "Products");
     }
 
     addproduct(productName) {
@@ -21,11 +21,6 @@ export class HomePage {
             }
         })
     }
-
-
-
-
-
 }
 
 

@@ -7,26 +7,16 @@ describe("Login", function () {
 
     beforeEach(function () {
         cy.launchBrowser();
-        cy.fixture('LoginPageTestData').then(function (LoginData) {
-            this.LoginData = LoginData;
-        })
+        cy.fixture('LoginPageTestData').then(function (LoginData) { this.LoginData = LoginData;})
     })
 
+    afterEach(function()
+    {
+        cy.logout();
+    })
 
     it("Validate Login page", function () {
+        login.validateloginPageProperties();
         login.login(this.LoginData.userName, this.LoginData.password)
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
 })

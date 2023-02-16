@@ -4,45 +4,27 @@ export class CartPage {
     checkoutButton = '#checkout';
 
 
+    getCartLabel()
+    {
+        return cy.get('.cart_item_label');
+    }
 
     clickCart() {
         cy.get(this.getCart).click();
-        cy.xpath(this.getYourCard).should("be.visible")
-
     }
 
-
-
-    // ValidateYourCartProducts(productName)
-    // {
-    //     cy.get('.cart_item_label').each(($el, index, $list) => 
-    //     {
-    //         const textproduct = $el.find('.inventory_item_name').text()
-    //         if(textproduct.includes(productName))
-    //         {
-    //             expect(textproduct).to.be.equal(productName)
-    //         }     
-    //     })
-
-    // }
+    validateYourCartPageProperties(expectedText)
+    {
+        cy.xpath(this.getYourCard).should("have.text", expectedText)
+    }
 
     validateYourCartProducts(productName) {
-
         productName.forEach(element => {
             cy.validateYourCart(element);
-
         });
-
     }
-
 
     selectCheckOut() {
         cy.get(this.checkoutButton).click();
-
     }
-
-
-
-
-
 }

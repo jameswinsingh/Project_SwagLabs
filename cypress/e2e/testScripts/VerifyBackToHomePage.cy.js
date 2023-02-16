@@ -9,7 +9,6 @@ import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage';
 import { CheckoutCompletePage } from '../../pages/CheckoutCompletePage';
 import { BackToHomePage } from '../../pages/BackToHomePage';
 
-
 describe("Navigate back to home page", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
@@ -27,15 +26,17 @@ describe("Navigate back to home page", function () {
         cy.fixture('CheckoutOverviewPage').then(function (overviewPageData) { this.overviewPageData = overviewPageData; });
         cy.fixture('CheckoutCompletePageTestData').then(function (completePageData) { this.completePageData = completePageData; });
         cy.fixture('BackToHomePage').then(function (ProductPageData) { this.ProductPageData = ProductPageData; });
-
     })
 
-
+    afterEach(function()
+    {
+        cy.logout();
+    })
 
     it("Navigate back to home page and open burger menu", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
-        
+
         shoppingCartContainer.clickCart();
         shoppingCartContainer.selectCheckOut();
 
@@ -43,22 +44,8 @@ describe("Navigate back to home page", function () {
         checkoutPage.selectContinueButton();
 
         overviewPage.selectFinish();
-
-        completePage.validateCompleteMessage(this.completePageData.completeText);
         completePage.selectBackHome();
 
         productPage.validateProductPageTitle(this.ProductPageData.productText);
-        productPage.openBurgerMenu();
-
     })
-
-
-
-
-
-
-
-
-
-
 })

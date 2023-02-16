@@ -8,7 +8,6 @@ import { CheckoutPage } from '../../pages/CheckoutPage';
 import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage';
 import { CheckoutCompletePage } from '../../pages/CheckoutCompletePage';
 
-
 describe("Verify the checkout completion page's order success message.", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
@@ -24,28 +23,27 @@ describe("Verify the checkout completion page's order success message.", functio
         cy.fixture('CheckoutPageTestData').then(function (checkoutPageData) { this.checkoutPageData = checkoutPageData; });
         cy.fixture('CheckoutOverviewPage').then(function (overviewPageData) { this.overviewPageData = overviewPageData; });
         cy.fixture('CheckoutCompletePageTestData').then(function (completePageData) { this.completePageData = completePageData; });
-
     })
 
-
-
-    it("Verify the success message and select 'Back Home' button" , function () {
+    afterEach(function()
+    {
+        cy.logout();
+    })
+    
+    it("Verify the success message and select 'Back Home' button", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();
         shoppingCartContainer.selectCheckOut();
 
-        checkoutPage.validateLandingPage();
         checkoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);
         checkoutPage.selectContinueButton();
 
-        overviewPage.validateProductQuantity(this.overviewPageData.productQuantity);
         overviewPage.calculateProductTotal();
         overviewPage.selectFinish();
 
         completePage.validateCompleteMessage(this.completePageData.completeText);
         completePage.selectBackHome();
-
     })
 
 
