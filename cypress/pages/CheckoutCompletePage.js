@@ -8,6 +8,5 @@ export class CheckoutCompletePage {
 
   selectBackHome() {
     cy.get(this.backHomeButton).click();
-
   }
 }

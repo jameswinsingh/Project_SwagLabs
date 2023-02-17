@@ -7,8 +7,7 @@ import { HomePage } from '../../pages/HomePage';
 import { CheckoutPage } from '../../pages/CheckoutPage';
 import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage';
 
-
-describe("Verify the number of quantity and the total cost of the chosen item.", function () {
+describe("Verify quantity and total", function () {
     const loginPage = new LoginPage()
     const homePage = new HomePage()
     const shoppingCartContainer = new CartPage()
@@ -28,7 +27,7 @@ describe("Verify the number of quantity and the total cost of the chosen item.",
         cy.logout();
     })
 
-    it("Validate the quantity and total cost of the products and click on finish button", function () {
+    it("Validate the quantity and total cost of the products, then click on finish button", function () {
         cy.clearCookies();
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);

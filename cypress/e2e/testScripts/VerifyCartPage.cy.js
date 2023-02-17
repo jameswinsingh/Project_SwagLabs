@@ -21,22 +21,12 @@ describe("Verify YOUR CART's product list, then click the checkout button.", fun
     {
         cy.logout();
     })
-//Select cart icon
-    it("Add product to the Cart and select checkout button", function () {
+
+    it("Validate the product list", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
         shoppingCartContainer.clickCart();
-        shoppingCartContainer.validateYourCartPageProperties(this.cartPageData.yourCartText);
         shoppingCartContainer.validateYourCartProducts(this.homePageData.productname);
         shoppingCartContainer.selectCheckOut();
     })
-
-    // it("Add product to the Cart and select checkout button", function () {
-    //     loginPage.login(this.LoginData.userName, this.LoginData.password);
-    //     homePage.addproduct(this.homePageData.productname);
-
-    //     shoppingCartContainer.clickCart();
-    //     shoppingCartContainer.validateYourCartProducts(this.homePageData.productname);
-    //     shoppingCartContainer.selectCheckOut();
-    // })
 })

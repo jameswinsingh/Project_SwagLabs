@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:08:39.001Z",
-    "end": "2023-02-16T13:08:44.638Z",
-    "duration": 5637,
+    "start": "2023-02-17T06:35:45.141Z",
+    "end": "2023-02-17T06:35:51.652Z",
+    "duration": 6511,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ecd7e35c-3142-4c3b-9547-fbb632a20ca7",
+      "uuid": "5b5aed83-2a4d-48d9-b348-5b769b8225bc",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCartPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCartPage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b7e2f1d7-9791-4514-9cbc-982059e9ff2d",
+          "uuid": "4ac22b1b-77b8-4a47-8bfc-13a1b0611335",
           "title": "Verify YOUR CART's product list, then click the checkout button.",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Add product to the Cart and select checkout button",
-              "fullTitle": "Verify YOUR CART's product list, then click the checkout button. Add product to the Cart and select checkout button",
+              "title": "Validate the product list",
+              "fullTitle": "Verify YOUR CART's product list, then click the checkout button. Validate the product list",
               "timedOut": null,
-              "duration": 3125,
+              "duration": 3896,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.validateYourCartPageProperties(this.cartPageData.yourCartText);\nshoppingCartContainer.validateYourCartProducts(this.homePageData.productname);\nshoppingCartContainer.selectCheckOut();",
+              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.validateYourCartProducts(this.homePageData.productname);\nshoppingCartContainer.selectCheckOut();",
               "err": {},
-              "uuid": "096d2ad6-57e1-46f0-8260-c32c93afbc0c",
-              "parentUUID": "b7e2f1d7-9791-4514-9cbc-982059e9ff2d",
+              "uuid": "e42d0da7-2a3d-4447-bf17-7767778ff685",
+              "parentUUID": "4ac22b1b-77b8-4a47-8bfc-13a1b0611335",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "096d2ad6-57e1-46f0-8260-c32c93afbc0c"
+            "e42d0da7-2a3d-4447-bf17-7767778ff685"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3125,
+          "duration": 3896,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

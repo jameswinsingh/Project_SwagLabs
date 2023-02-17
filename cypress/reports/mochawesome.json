@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:08:17.687Z",
-    "end": "2023-02-16T13:08:31.134Z",
-    "duration": 13447,
+    "start": "2023-02-17T06:35:20.411Z",
+    "end": "2023-02-17T06:35:33.619Z",
+    "duration": 13208,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1a462569-9247-4d5d-b6c5-e4f4a14017e4",
+      "uuid": "924d411f-ddfe-4ba5-bf7f-39ed0537f668",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyBackToHomePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyBackToHomePage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "47024048-4683-486d-9af4-f80480a2d5c8",
+          "uuid": "74ac6a7c-f399-4287-9654-d39699a818f7",
           "title": "Navigate back to home page",
           "fullFile": "",
           "file": "",
@@ -35,10 +35,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Navigate back to home page and open burger menu",
-              "fullTitle": "Navigate back to home page Navigate back to home page and open burger menu",
+              "title": "Navigate back to home page",
+              "fullTitle": "Navigate back to home page Navigate back to home page",
               "timedOut": null,
-              "duration": 8810,
+              "duration": 9403,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.selectFinish();\ncompletePage.selectBackHome();\nproductPage.validateProductPageTitle(this.ProductPageData.productText);",
               "err": {},
-              "uuid": "f1fd0aa8-0ab0-4b89-b48c-69cf00b9dcfd",
-              "parentUUID": "47024048-4683-486d-9af4-f80480a2d5c8",
+              "uuid": "e56cc4a8-246a-4f19-8b48-0d84114b6da3",
+              "parentUUID": "74ac6a7c-f399-4287-9654-d39699a818f7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f1fd0aa8-0ab0-4b89-b48c-69cf00b9dcfd"
+            "e56cc4a8-246a-4f19-8b48-0d84114b6da3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8810,
+          "duration": 9403,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:08:51.250Z",
-    "end": "2023-02-16T13:08:59.284Z",
-    "duration": 8034,
+    "start": "2023-02-17T06:35:58.823Z",
+    "end": "2023-02-17T06:36:08.960Z",
+    "duration": 10137,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "51dce553-2a99-4858-af6b-6499f6a7d98e",
+      "uuid": "36874e36-7efe-4dd6-b4fb-7f808d8fd42d",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutCompletePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCheckoutCompletePage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9ef3508b-5895-443a-be68-f08836edc62f",
+          "uuid": "b0b2ecb5-acd1-4138-b0fe-6da7cf88f55e",
           "title": "Verify the checkout completion page's order success message.",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Verify the success message and select 'Back Home' button",
               "fullTitle": "Verify the checkout completion page's order success message. Verify the success message and select 'Back Home' button",
               "timedOut": null,
-              "duration": 5171,
+              "duration": 7016,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.calculateProductTotal();\noverviewPage.selectFinish();\ncompletePage.validateCompleteMessage(this.completePageData.completeText);\ncompletePage.selectBackHome();",
               "err": {},
-              "uuid": "39b2bbb2-da63-4a06-9a1a-34654b22d49c",
-              "parentUUID": "9ef3508b-5895-443a-be68-f08836edc62f",
+              "uuid": "cc52b488-6fec-4df6-bfa4-b2a64373a4e2",
+              "parentUUID": "b0b2ecb5-acd1-4138-b0fe-6da7cf88f55e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "39b2bbb2-da63-4a06-9a1a-34654b22d49c"
+            "cc52b488-6fec-4df6-bfa4-b2a64373a4e2"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5171,
+          "duration": 7016,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

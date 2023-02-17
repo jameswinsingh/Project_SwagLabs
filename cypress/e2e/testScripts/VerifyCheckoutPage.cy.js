@@ -33,37 +33,4 @@ describe("Provide user information in YOUR INFORMATION page", function () {
         checkoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);
         checkoutPage.selectContinueButton();
     })
-
-    // it("Enter user information and Select continue button", function () {
-    //     loginPage.login(this.LoginData.userName, this.LoginData.password);
-    //     homePage.addproduct(this.homePageData.productname);
-    //     shoppingCartContainer.clickCart();
-    //     shoppingCartContainer.selectCheckOut();
-
-    //     checkoutPage.validateLandingPage();
-    //     checkoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);
-    //     checkoutPage.selectContinueButton();
-    // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })

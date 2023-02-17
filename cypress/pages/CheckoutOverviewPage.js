@@ -56,37 +56,4 @@ export class CheckoutOverviewPage {
     validateOverviewPageProperties(expectedText) {
         cy.get(this.overviewPageProperty).should("have.text", expectedText)
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

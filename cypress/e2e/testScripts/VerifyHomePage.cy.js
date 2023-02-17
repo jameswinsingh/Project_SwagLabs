@@ -3,7 +3,7 @@ import 'cypress-xpath'
 import { HomePage } from '../../pages/HomePage';
 import { LoginPage } from "../../pages/LoginPage";
 
-describe("Add products to the cart", function () {
+describe("Add products", function () {
 
     const homePage = new HomePage();
     const login = new LoginPage();
@@ -19,25 +19,9 @@ describe("Add products to the cart", function () {
         cy.logout();
     })
 
-    it("Validate Home landing page after login", function () {
+    it("Add products to the cart", function () {
         login.login(this.LoginData.userName, this.LoginData.password);
         homePage.validateHomePageProperties();
         homePage.addproduct(this.homePageData.productname)
     })
-
-    // it("Add product to cart", function () {
-    //     login.login(this.LoginData.userName, this.LoginData.password);
-    //     homePage.addproduct(this.homePageData.productname)
-    // })
-
-
-
-
-
-
-
-
-
-
-
 })

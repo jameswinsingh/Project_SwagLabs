@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:09:20.534Z",
-    "end": "2023-02-16T13:09:27.730Z",
-    "duration": 7196,
+    "start": "2023-02-17T06:36:33.115Z",
+    "end": "2023-02-17T06:36:41.303Z",
+    "duration": 8188,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e556abd5-333e-4a50-a529-70e9a5cd49be",
+      "uuid": "ca5324d2-fd44-4d3f-8f7f-684fc5b1d8ca",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCheckoutPage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4baba954-60e5-441f-8827-cdf79897725f",
+          "uuid": "7d3b2bdb-4163-4826-b88c-4a6d9f398647",
           "title": "Provide user information in YOUR INFORMATION page",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "Validate landing page after selecting checkout button",
               "fullTitle": "Provide user information in YOUR INFORMATION page Validate landing page after selecting checkout button",
               "timedOut": null,
-              "duration": 4565,
+              "duration": 5207,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.validateLandingPage(this.checkoutPageData.checkoutPageText);\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();",
               "err": {},
-              "uuid": "1a7f07ae-6984-4922-958e-f9ee39e11924",
-              "parentUUID": "4baba954-60e5-441f-8827-cdf79897725f",
+              "uuid": "fea5a200-a967-4d00-b86f-8499368cdf5b",
+              "parentUUID": "7d3b2bdb-4163-4826-b88c-4a6d9f398647",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1a7f07ae-6984-4922-958e-f9ee39e11924"
+            "fea5a200-a967-4d00-b86f-8499368cdf5b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4565,
+          "duration": 5207,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

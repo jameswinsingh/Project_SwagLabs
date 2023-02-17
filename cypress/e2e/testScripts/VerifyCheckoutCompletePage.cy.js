@@ -25,11 +25,10 @@ describe("Verify the checkout completion page's order success message.", functio
         cy.fixture('CheckoutCompletePageTestData').then(function (completePageData) { this.completePageData = completePageData; });
     })
 
-    afterEach(function()
-    {
+    afterEach(function () {
         cy.logout();
     })
-    
+
     it("Verify the success message and select 'Back Home' button", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
@@ -45,14 +44,4 @@ describe("Verify the checkout completion page's order success message.", functio
         completePage.validateCompleteMessage(this.completePageData.completeText);
         completePage.selectBackHome();
     })
-
-
-
-
-
-
-
-
-
-
 })

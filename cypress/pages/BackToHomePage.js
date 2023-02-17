@@ -5,7 +5,6 @@ export class BackToHomePage {
     burgerMenuButon = "#react-burger-menu-btn"
     logoutButton = "#logout_sidebar_link"
 
-
     getBurgerMenuButton()
     {
         return cy.get(this.burgerMenuButon)
@@ -16,8 +15,6 @@ export class BackToHomePage {
         return cy.get(this.logoutButton)
     }
 
-
-
     validateProductPageTitle(titleText) {
         cy.get(this.title).should("have.text", titleText)
     }
@@ -26,4 +23,3 @@ export class BackToHomePage {
         cy.get(this.burgerMenu).click()
     }
 }
-

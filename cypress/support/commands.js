@@ -27,11 +27,13 @@
 import { CartPage } from "../pages/CartPage"
 import { BackToHomePage } from "../pages/BackToHomePage";
 
+
 const cartPage = new CartPage();
 const backToHome = new BackToHomePage();
 
 Cypress.Commands.add('launchBrowser', () => {
-    cy.visit("https://www.saucedemo.com/")
+    //cy.visit("https://www.saucedemo.com/")
+    cy.visit('https://www.saucedemo.com')
 })
 
 Cypress.Commands.add('validateYourCart', (productName) => {
@@ -48,6 +50,14 @@ Cypress.Commands.add('logout', () => {
     backToHome.getBurgerMenuButton().click({ force: true });
     backToHome.getLogoutButton().click({ force: true });
 })
+
+Cypress.Commands.add('reusable', () => {
+    loginPage.login(this.LoginData.userName, this.LoginData.password);
+    homePage.addproduct(this.homePageData.productname);
+    shoppingCartContainer.clickCart();
+})
+
+
 
 
 

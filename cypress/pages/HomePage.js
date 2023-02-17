@@ -22,12 +22,3 @@ export class HomePage {
         })
     }
 }
-
-
-
-
-
-
-
-
-

@@ -5,9 +5,9 @@
     "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:08:17.687Z",
-    "end": "2023-02-16T13:09:49.151Z",
-    "duration": 31772,
+    "start": "2023-02-17T06:35:20.411Z",
+    "end": "2023-02-17T06:37:06.179Z",
+    "duration": 37715,
     "testsRegistered": 7,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ecd7e35c-3142-4c3b-9547-fbb632a20ca7",
+      "uuid": "5b5aed83-2a4d-48d9-b348-5b769b8225bc",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCartPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCartPage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b7e2f1d7-9791-4514-9cbc-982059e9ff2d",
+          "uuid": "4ac22b1b-77b8-4a47-8bfc-13a1b0611335",
           "title": "Verify YOUR CART's product list, then click the checkout button.",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Add product to the Cart and select checkout button",
-              "fullTitle": "Verify YOUR CART's product list, then click the checkout button. Add product to the Cart and select checkout button",
+              "title": "Validate the product list",
+              "fullTitle": "Verify YOUR CART's product list, then click the checkout button. Validate the product list",
               "timedOut": null,
-              "duration": 3125,
+              "duration": 3896,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.validateYourCartPageProperties(this.cartPageData.yourCartText);\nshoppingCartContainer.validateYourCartProducts(this.homePageData.productname);\nshoppingCartContainer.selectCheckOut();",
+              "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.validateYourCartProducts(this.homePageData.productname);\nshoppingCartContainer.selectCheckOut();",
               "err": {},
-              "uuid": "096d2ad6-57e1-46f0-8260-c32c93afbc0c",
-              "parentUUID": "b7e2f1d7-9791-4514-9cbc-982059e9ff2d",
+              "uuid": "e42d0da7-2a3d-4447-bf17-7767778ff685",
+              "parentUUID": "4ac22b1b-77b8-4a47-8bfc-13a1b0611335",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "096d2ad6-57e1-46f0-8260-c32c93afbc0c"
+            "e42d0da7-2a3d-4447-bf17-7767778ff685"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3125,
+          "duration": 3896,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "51dce553-2a99-4858-af6b-6499f6a7d98e",
+      "uuid": "36874e36-7efe-4dd6-b4fb-7f808d8fd42d",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutCompletePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCheckoutCompletePage.cy.js",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9ef3508b-5895-443a-be68-f08836edc62f",
+          "uuid": "b0b2ecb5-acd1-4138-b0fe-6da7cf88f55e",
           "title": "Verify the checkout completion page's order success message.",
           "fullFile": "",
           "file": "",
@@ -96,7 +96,7 @@
               "title": "Verify the success message and select 'Back Home' button",
               "fullTitle": "Verify the checkout completion page's order success message. Verify the success message and select 'Back Home' button",
               "timedOut": null,
-              "duration": 5171,
+              "duration": 7016,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -105,20 +105,20 @@
               "context": null,
               "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.calculateProductTotal();\noverviewPage.selectFinish();\ncompletePage.validateCompleteMessage(this.completePageData.completeText);\ncompletePage.selectBackHome();",
               "err": {},
-              "uuid": "39b2bbb2-da63-4a06-9a1a-34654b22d49c",
-              "parentUUID": "9ef3508b-5895-443a-be68-f08836edc62f",
+              "uuid": "cc52b488-6fec-4df6-bfa4-b2a64373a4e2",
+              "parentUUID": "b0b2ecb5-acd1-4138-b0fe-6da7cf88f55e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "39b2bbb2-da63-4a06-9a1a-34654b22d49c"
+            "cc52b488-6fec-4df6-bfa4-b2a64373a4e2"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5171,
+          "duration": 7016,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -134,7 +134,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "c764d295-74ac-4681-9a2d-d9fb8dba093f",
+      "uuid": "014e23f2-213e-46ed-965c-b4ae9ae162f9",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutOverviewPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCheckoutOverviewPage.cy.js",
@@ -143,18 +143,18 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a4abc6ae-14dc-4050-9700-0153e022ddc1",
-          "title": "Verify the number of quantity and the total cost of the chosen item.",
+          "uuid": "e0ba8256-aacb-4b96-8c4a-07e236055426",
+          "title": "Verify quantity and total",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate the quantity and total cost of the products and click on finish button",
-              "fullTitle": "Verify the number of quantity and the total cost of the chosen item. Validate the quantity and total cost of the products and click on finish button",
+              "title": "Validate the quantity and total cost of the products, then click on finish button",
+              "fullTitle": "Verify quantity and total Validate the quantity and total cost of the products, then click on finish button",
               "timedOut": null,
-              "duration": 5014,
+              "duration": 6658,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -163,20 +163,20 @@
               "context": null,
               "code": "cy.clearCookies();\nloginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.validateOverviewPageProperties(this.overviewPageData.overviewText);\noverviewPage.validateProductQuantity(this.overviewPageData.productQuantity);\noverviewPage.calculateProductTotal();\noverviewPage.selectFinish();",
               "err": {},
-              "uuid": "99e8b18d-4b80-4dc6-b8db-3ef42298de0c",
-              "parentUUID": "a4abc6ae-14dc-4050-9700-0153e022ddc1",
+              "uuid": "de934a9c-04b7-4d55-94e8-a1c69d99001d",
+              "parentUUID": "e0ba8256-aacb-4b96-8c4a-07e236055426",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "99e8b18d-4b80-4dc6-b8db-3ef42298de0c"
+            "de934a9c-04b7-4d55-94e8-a1c69d99001d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5014,
+          "duration": 6658,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -192,7 +192,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e556abd5-333e-4a50-a529-70e9a5cd49be",
+      "uuid": "ca5324d2-fd44-4d3f-8f7f-684fc5b1d8ca",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCheckoutPage.cy.js",
@@ -201,7 +201,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4baba954-60e5-441f-8827-cdf79897725f",
+          "uuid": "7d3b2bdb-4163-4826-b88c-4a6d9f398647",
           "title": "Provide user information in YOUR INFORMATION page",
           "fullFile": "",
           "file": "",
@@ -212,29 +212,29 @@
               "title": "Validate landing page after selecting checkout button",
               "fullTitle": "Provide user information in YOUR INFORMATION page Validate landing page after selecting checkout button",
               "timedOut": null,
-              "duration": 4565,
+              "duration": 5207,
               "state": "passed",
-              "speed": "fast",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.validateLandingPage(this.checkoutPageData.checkoutPageText);\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();",
               "err": {},
-              "uuid": "1a7f07ae-6984-4922-958e-f9ee39e11924",
-              "parentUUID": "4baba954-60e5-441f-8827-cdf79897725f",
+              "uuid": "fea5a200-a967-4d00-b86f-8499368cdf5b",
+              "parentUUID": "7d3b2bdb-4163-4826-b88c-4a6d9f398647",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1a7f07ae-6984-4922-958e-f9ee39e11924"
+            "fea5a200-a967-4d00-b86f-8499368cdf5b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4565,
+          "duration": 5207,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -250,7 +250,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "11d428c1-9ca7-4d2c-b5d9-bfa668720d73",
+      "uuid": "da8adb8e-8827-493c-a408-98c3c31542eb",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyHomePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyHomePage.cy.js",
@@ -259,18 +259,18 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6d2c30ec-7ee6-4743-899a-83a3f2edb671",
-          "title": "Add products to the cart",
+          "uuid": "386a8bea-ff3e-470e-92b8-67720254ae11",
+          "title": "Add products",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate Home landing page after login",
-              "fullTitle": "Add products to the cart Validate Home landing page after login",
+              "title": "Add products to the cart",
+              "fullTitle": "Add products Add products to the cart",
               "timedOut": null,
-              "duration": 2790,
+              "duration": 3551,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -279,20 +279,20 @@
               "context": null,
               "code": "login.login(this.LoginData.userName, this.LoginData.password);\nhomePage.validateHomePageProperties();\nhomePage.addproduct(this.homePageData.productname);",
               "err": {},
-              "uuid": "e00e2fb4-27e0-4a96-a64e-6d5f6da05a2a",
-              "parentUUID": "6d2c30ec-7ee6-4743-899a-83a3f2edb671",
+              "uuid": "0914195b-2d9b-4c9b-9116-7cba3075b788",
+              "parentUUID": "386a8bea-ff3e-470e-92b8-67720254ae11",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e00e2fb4-27e0-4a96-a64e-6d5f6da05a2a"
+            "0914195b-2d9b-4c9b-9116-7cba3075b788"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2790,
+          "duration": 3551,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -308,7 +308,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e4341936-c926-4624-be5b-3b5076f01d17",
+      "uuid": "99d4a447-80b1-4b27-9241-a21cd25046bc",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyLoginPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyLoginPage.cy.js",
@@ -317,7 +317,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3bf0974e-6ef8-47db-813a-3cb16aaa4776",
+          "uuid": "1bf31fe3-b7a4-4523-9506-3b5627511391",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -328,7 +328,7 @@
               "title": "Validate Login page",
               "fullTitle": "Login Validate Login page",
               "timedOut": null,
-              "duration": 2297,
+              "duration": 1984,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -337,20 +337,20 @@
               "context": null,
               "code": "login.validateloginPageProperties();\nlogin.login(this.LoginData.userName, this.LoginData.password);",
               "err": {},
-              "uuid": "1bc3c989-02db-4d21-a35a-0c5b0b27f1f7",
-              "parentUUID": "3bf0974e-6ef8-47db-813a-3cb16aaa4776",
+              "uuid": "89f36910-2814-4287-911d-17082b214682",
+              "parentUUID": "1bf31fe3-b7a4-4523-9506-3b5627511391",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1bc3c989-02db-4d21-a35a-0c5b0b27f1f7"
+            "89f36910-2814-4287-911d-17082b214682"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2297,
+          "duration": 1984,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -366,7 +366,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "1a462569-9247-4d5d-b6c5-e4f4a14017e4",
+      "uuid": "924d411f-ddfe-4ba5-bf7f-39ed0537f668",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyBackToHomePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyBackToHomePage.cy.js",
@@ -375,7 +375,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "47024048-4683-486d-9af4-f80480a2d5c8",
+          "uuid": "74ac6a7c-f399-4287-9654-d39699a818f7",
           "title": "Navigate back to home page",
           "fullFile": "",
           "file": "",
@@ -383,10 +383,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Navigate back to home page and open burger menu",
-              "fullTitle": "Navigate back to home page Navigate back to home page and open burger menu",
+              "title": "Navigate back to home page",
+              "fullTitle": "Navigate back to home page Navigate back to home page",
               "timedOut": null,
-              "duration": 8810,
+              "duration": 9403,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -395,20 +395,20 @@
               "context": null,
               "code": "loginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.selectFinish();\ncompletePage.selectBackHome();\nproductPage.validateProductPageTitle(this.ProductPageData.productText);",
               "err": {},
-              "uuid": "f1fd0aa8-0ab0-4b89-b48c-69cf00b9dcfd",
-              "parentUUID": "47024048-4683-486d-9af4-f80480a2d5c8",
+              "uuid": "e56cc4a8-246a-4f19-8b48-0d84114b6da3",
+              "parentUUID": "74ac6a7c-f399-4287-9654-d39699a818f7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f1fd0aa8-0ab0-4b89-b48c-69cf00b9dcfd"
+            "e56cc4a8-246a-4f19-8b48-0d84114b6da3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8810,
+          "duration": 9403,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

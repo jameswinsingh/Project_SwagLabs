@@ -33,7 +33,7 @@ describe("Navigate back to home page", function () {
         cy.logout();
     })
 
-    it("Navigate back to home page and open burger menu", function () {
+    it("Navigate back to home page", function () {
         loginPage.login(this.LoginData.userName, this.LoginData.password);
         homePage.addproduct(this.homePageData.productname);
 

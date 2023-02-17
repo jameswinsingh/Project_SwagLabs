@@ -3,7 +3,6 @@ export class CartPage {
     getYourCard = '//span[contains(text(), "Your Cart")]';
     checkoutButton = '#checkout';
 
-
     getCartLabel()
     {
         return cy.get('.cart_item_label');

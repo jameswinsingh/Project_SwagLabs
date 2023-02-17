@@ -5,8 +5,7 @@ export class LoginPage {
     botlogo = ".bot_column"
 
 
-    validateloginPageProperties()
-    {
+    validateloginPageProperties() {
         cy.get(this.botlogo).should("be.visible")
     }
 

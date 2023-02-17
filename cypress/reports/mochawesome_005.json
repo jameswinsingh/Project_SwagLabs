@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:09:33.830Z",
-    "end": "2023-02-16T13:09:39.071Z",
-    "duration": 5241,
+    "start": "2023-02-17T06:36:47.960Z",
+    "end": "2023-02-17T06:36:54.507Z",
+    "duration": 6547,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "11d428c1-9ca7-4d2c-b5d9-bfa668720d73",
+      "uuid": "da8adb8e-8827-493c-a408-98c3c31542eb",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyHomePage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyHomePage.cy.js",
@@ -27,18 +27,18 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6d2c30ec-7ee6-4743-899a-83a3f2edb671",
-          "title": "Add products to the cart",
+          "uuid": "386a8bea-ff3e-470e-92b8-67720254ae11",
+          "title": "Add products",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate Home landing page after login",
-              "fullTitle": "Add products to the cart Validate Home landing page after login",
+              "title": "Add products to the cart",
+              "fullTitle": "Add products Add products to the cart",
               "timedOut": null,
-              "duration": 2790,
+              "duration": 3551,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "login.login(this.LoginData.userName, this.LoginData.password);\nhomePage.validateHomePageProperties();\nhomePage.addproduct(this.homePageData.productname);",
               "err": {},
-              "uuid": "e00e2fb4-27e0-4a96-a64e-6d5f6da05a2a",
-              "parentUUID": "6d2c30ec-7ee6-4743-899a-83a3f2edb671",
+              "uuid": "0914195b-2d9b-4c9b-9116-7cba3075b788",
+              "parentUUID": "386a8bea-ff3e-470e-92b8-67720254ae11",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e00e2fb4-27e0-4a96-a64e-6d5f6da05a2a"
+            "0914195b-2d9b-4c9b-9116-7cba3075b788"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2790,
+          "duration": 3551,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

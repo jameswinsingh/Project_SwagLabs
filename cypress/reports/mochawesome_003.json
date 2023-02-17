@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:09:05.771Z",
-    "end": "2023-02-16T13:09:13.806Z",
-    "duration": 8035,
+    "start": "2023-02-17T06:36:16.394Z",
+    "end": "2023-02-17T06:36:26.228Z",
+    "duration": 9834,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c764d295-74ac-4681-9a2d-d9fb8dba093f",
+      "uuid": "014e23f2-213e-46ed-965c-b4ae9ae162f9",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyCheckoutOverviewPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyCheckoutOverviewPage.cy.js",
@@ -27,18 +27,18 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a4abc6ae-14dc-4050-9700-0153e022ddc1",
-          "title": "Verify the number of quantity and the total cost of the chosen item.",
+          "uuid": "e0ba8256-aacb-4b96-8c4a-07e236055426",
+          "title": "Verify quantity and total",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Validate the quantity and total cost of the products and click on finish button",
-              "fullTitle": "Verify the number of quantity and the total cost of the chosen item. Validate the quantity and total cost of the products and click on finish button",
+              "title": "Validate the quantity and total cost of the products, then click on finish button",
+              "fullTitle": "Verify quantity and total Validate the quantity and total cost of the products, then click on finish button",
               "timedOut": null,
-              "duration": 5014,
+              "duration": 6658,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.clearCookies();\nloginPage.login(this.LoginData.userName, this.LoginData.password);\nhomePage.addproduct(this.homePageData.productname);\nshoppingCartContainer.clickCart();\nshoppingCartContainer.selectCheckOut();\ncheckoutPage.enterUserInformation(this.checkoutPageData.firstName, this.checkoutPageData.lastName, this.checkoutPageData.postalCode);\ncheckoutPage.selectContinueButton();\noverviewPage.validateOverviewPageProperties(this.overviewPageData.overviewText);\noverviewPage.validateProductQuantity(this.overviewPageData.productQuantity);\noverviewPage.calculateProductTotal();\noverviewPage.selectFinish();",
               "err": {},
-              "uuid": "99e8b18d-4b80-4dc6-b8db-3ef42298de0c",
-              "parentUUID": "a4abc6ae-14dc-4050-9700-0153e022ddc1",
+              "uuid": "de934a9c-04b7-4d55-94e8-a1c69d99001d",
+              "parentUUID": "e0ba8256-aacb-4b96-8c4a-07e236055426",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "99e8b18d-4b80-4dc6-b8db-3ef42298de0c"
+            "de934a9c-04b7-4d55-94e8-a1c69d99001d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5014,
+          "duration": 6658,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

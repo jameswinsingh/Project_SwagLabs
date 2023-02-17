@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-16T13:09:44.590Z",
-    "end": "2023-02-16T13:09:49.151Z",
-    "duration": 4561,
+    "start": "2023-02-17T06:37:01.038Z",
+    "end": "2023-02-17T06:37:06.179Z",
+    "duration": 5141,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e4341936-c926-4624-be5b-3b5076f01d17",
+      "uuid": "99d4a447-80b1-4b27-9241-a21cd25046bc",
       "title": "",
       "fullFile": "cypress\\e2e\\testScripts\\VerifyLoginPage.cy.js",
       "file": "cypress\\e2e\\testScripts\\VerifyLoginPage.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3bf0974e-6ef8-47db-813a-3cb16aaa4776",
+          "uuid": "1bf31fe3-b7a4-4523-9506-3b5627511391",
           "title": "Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Validate Login page",
               "fullTitle": "Login Validate Login page",
               "timedOut": null,
-              "duration": 2297,
+              "duration": 1984,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "login.validateloginPageProperties();\nlogin.login(this.LoginData.userName, this.LoginData.password);",
               "err": {},
-              "uuid": "1bc3c989-02db-4d21-a35a-0c5b0b27f1f7",
-              "parentUUID": "3bf0974e-6ef8-47db-813a-3cb16aaa4776",
+              "uuid": "89f36910-2814-4287-911d-17082b214682",
+              "parentUUID": "1bf31fe3-b7a4-4523-9506-3b5627511391",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1bc3c989-02db-4d21-a35a-0c5b0b27f1f7"
+            "89f36910-2814-4287-911d-17082b214682"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2297,
+          "duration": 1984,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
